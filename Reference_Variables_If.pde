@@ -1,31 +1,55 @@
-// add your Reference_Variable_If code here
-
-float a = 2;
-float b = 2;
+PImage img;
+PImage head;
+float a;
+float b;
 
 void setup() {
-  size(600, 500);
+  size(735, 543);
   noStroke();
   smooth();
-  frameRate(2);
+  frameRate(30);
+  a = 2;
+  b = 735;
+  head = loadImage("vetrone.head.png");
 }
 
 void draw() {
   background(50);
-  //float a =  a + 2;
-  //float b =  b - 2;
+
+  img = loadImage("flag.png");
+  tint(255, 170);
+  image(img, 0, 0);
+
+
+
   //background lines
-  stroke(255, 15, 15);
-  noFill();
-  strokeWeight(50);
-  line(width/2, height/2, random(width+400), random(height+400));
+  stroke(200, 0, 0);
+  strokeWeight(45);
+  line(a-117, height/2, random(-8000, 8000), random(-8000, 8000));
+
+  stroke(225, 0, 0);
+  strokeWeight(20);
+  line(a-117, height/2, random(-8000, 8000), random(-8000, 8000));
 
   //white flag rect
   fill(255);
   noStroke();
-  rect(-50, height/2-75, 200, 150, 5); 
+  rect(a-200, height/2-75, 225, 145, 5); 
+  if (a > 440) 
+  {  
+    a =  440;
+  }
+  //red circle
+  fill(255, 0, 0);
+  ellipse(b, height/2, 60, 60);
+  if (b < 367) 
+  {  
+    b = 367;
+  }
 
-  //white flag circle
-  fill(255, a, b);
-  ellipse(width+50, height/2, 50, 50);
+  tint(500);
+  image(head, mouseX-80, mouseY-100, 108, 145);
+
+  a =  a + 6;
+  b =  b - 4.86;
 }
