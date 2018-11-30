@@ -14,10 +14,10 @@ void setup() {
 }
 
 void draw() {
-  background(50);
+  //background(50);
 
   img = loadImage("flag.png");
-  tint(255, 170);
+  //tint(255, 170);
   image(img, 0, 0);
 
 
