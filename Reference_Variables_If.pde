@@ -31,6 +31,11 @@ void draw() {
   strokeWeight(20);
   line(a-117, height/2, random(-8000, 8000), random(-8000, 8000));
 
+
+  tint(200);
+  image(head, mouseX-300, mouseY-200, 108, 145);
+
+
   //white flag rect
   fill(255);
   noStroke();
@@ -46,9 +51,6 @@ void draw() {
   {  
     b = 367;
   }
-
-  tint(500);
-  image(head, mouseX-80, mouseY-100, 108, 145);
 
   a =  a + 6;
   b =  b - 4.86;
