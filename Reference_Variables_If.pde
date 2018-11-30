@@ -15,11 +15,11 @@ void setup() {
 }
 
 void draw() {
-  //background(50);
+  background(50);
 
-  img = loadImage("flag.png");
+  //img = loadImage("flag.png");
   //tint(255, 170);
-  image(img, 0, 0, 735, 543);
+  //image(img, 0, 0, 735, 543);
 
 
 
