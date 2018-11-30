@@ -11,15 +11,15 @@ void setup() {
   a = 2;
   b = 735;
   head = loadImage("vetrone.head.png");
-  //img = loadImage("flag.png");
+  img = loadImage("flag.png");
 }
 
 void draw() {
   //background(50);
 
-  img = loadImage("flag.png", 735, 543);
+  img = loadImage("flag.png");
   //tint(255, 170);
-  image(img, 0, 0);
+  image(img, 0, 0, 735, 543);
 
 
 
